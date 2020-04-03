@@ -1,0 +1,24 @@
+type Owner {
+    id: String
+    name: String
+    age: Int
+    email: String
+}
+
+input findOwnerInput {
+    email: String
+}
+
+type Query {
+    ownerDetail(input: findOwnerInput): Owner
+}
+
+input ownerInput {
+  name: String
+  age: Int
+  email: String
+}
+
+type Mutation {
+    createOwner(input: ownerInput): Owner
+}

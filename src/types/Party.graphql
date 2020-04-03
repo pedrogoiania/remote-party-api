@@ -1,0 +1,6 @@
+type Party{
+    id: String
+    name: String
+    address: String
+    owner: Owner
+}
