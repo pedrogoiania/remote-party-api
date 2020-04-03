@@ -3,6 +3,7 @@ const { ApolloServer } = require('apollo-server');
 const resolvers = require('./resolvers');
 const types = require('./types');
 const controllers = require('./controllers');
+const extensions = require('./extensions');
 
 require('./utils/db');
 
@@ -20,7 +21,7 @@ const server = new ApolloServer({
   playground: true,
   introspection: true,
   context,
-  // extensions,
+  extensions,
 });
 
 const running = ({ url }) => {

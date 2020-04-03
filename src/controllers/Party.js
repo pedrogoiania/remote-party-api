@@ -16,7 +16,16 @@ const findPartys = async () => {
   }
 };
 
+const totalOfPartys = async () => {
+  try {
+    return partyPersistence.countDocuments();
+  } catch (err) {
+    return err;
+  }
+};
+
 module.exports = {
   createParty,
   findPartys,
+  totalOfPartys,
 };
