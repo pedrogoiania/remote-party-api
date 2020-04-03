@@ -1,6 +1,20 @@
 type Party{
     id: String
     name: String
-    address: String
+    url: String
     owner: Owner
+}
+
+extend type Query {
+    getAllPartys: [Party]
+}
+
+input partyInput {
+    name: String
+    url: String
+    ownerEmail: String
+}
+
+extend type Mutation{
+    createParty(input: partyInput): Party
 }
